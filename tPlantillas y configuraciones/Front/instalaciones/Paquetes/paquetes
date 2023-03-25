@@ -1,0 +1,10 @@
+en el package.json se va a instalar en consola con estos comandos para el front
+
+- npm i
+- npx create-react-app 
+- react-router-dom
+- redux@4.0.5
+- react-redux
+- redux-thunk
+- --save redux-devtools-extension
+npm i axios

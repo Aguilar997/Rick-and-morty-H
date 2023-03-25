@@ -1,0 +1,77 @@
+- PARA CREAR EL BACKEND DESDE CERO PRIMERO TENEMOS QUE CREAR:
+Un archivo llamado server.js.
+Una carpeta llamada controllers.
+Una carpeta llamada routes.
+Una carpeta llamada utils.
+EN LA CARPETA RAIZ EJECUTAR EL COMANDO: npm init
+LUEGO EL SIGUIENTE COMANDO: npm install nodemon
+POR ULTIMO: Una vez hecho esto, dentro del objeto scripts tienes que dejar el script start de la siguiente manera:
+"start": "nodemon ./src/server.js", esto en el package.json
+- - - - - - - - -- - - - - - - - -- - - - - - - - -- - - - - - - - -- - - - - - - - -- - - - - - - - -- - - - - - - - -
+
+- stdout es una abreviatura de "standard output" (salida estándar) y se refiere al flujo de datos que se envía desde
+ un programa a la pantalla o consola. En Node.js, se puede acceder a stdout a través del objeto process.stdout.
+ stdout.write(): se utiliza para escribir datos en la salida estándar.
+ stdout.end(): se utiliza para finalizar la salida estándar.
+
+- write es un método que se puede utilizar con stdout en Node.js para escribir datos en la pantalla o consola.
+ Por ejemplo, para escribir "Hola mundo" en la pantalla, se puede utilizar la siguiente línea de código: process.stdout.write('Hola mundo').
+ 
+- stdin.on es un método que se puede utilizar en Node.js para capturar la entrada del usuario desde la consola. 
+ Permite al usuario interactuar con el programa y proporcionar datos al mismo. Por ejemplo, para capturar la
+  entrada del usuario y mostrarla en la pantalla, se puede utilizar el siguiente código:
+
+  process.stdout.write(`Tu escribiste: ${data}`);
+  process.stdin.on('data', (data) => {
+});
+
+- bash es un shell de línea de comandos utilizado en sistemas operativos basados en Unix, como Linux y macOS.
+ Permite a los usuarios interactuar con el sistema operativo y ejecutar comandos.
+
+- trim es un método que se puede utilizar en cadenas de texto en JavaScript para eliminar los espacios en blanco al principio y al final de la cadena.
+ Por ejemplo, si se tiene la cadena " Hola mundo ", se puede eliminar los espacios en blanco utilizando el siguiente código: " Hola mundo ".trim().
+
+- print es una función que se puede utilizar en algunos lenguajes de programación, como Python, para mostrar datos en la pantalla o consola.
+ Por ejemplo, para mostrar "Hola mundo" en la pantalla en Python, se puede utilizar la siguiente línea de código: print('Hola mundo').
+
+- \n es un carácter de escape en la mayoría de los lenguajes de programación que se utiliza para representar una nueva línea.
+ Se utiliza para separar líneas de texto en la pantalla o en archivos de texto.
+
+- prompt es una función en JavaScript que se utiliza para mostrar una ventana de diálogo al usuario y pedirle que ingrese algún tipo de información.
+ Por ejemplo, se puede utilizar prompt para pedir al usuario que ingrese su nombre o su dirección de correo electrónico. En el backend, por lo general,
+ no se utiliza prompt, ya que se trabaja con servidores y no con interfaces de usuario.
+
+- args es una abreviatura de "arguments" (argumentos) y se refiere a los argumentos que se pasan a un programa o función en tiempo de ejecución.
+En el backend, args a menudo se utiliza para pasar parámetros de configuración o información específica al programa.
+Por ejemplo, se puede pasar una dirección IP y un número de puerto como argumentos a un servidor para configurarlo.
+
+- importar y exportar modulos en node.js
+para importar: const modulo = require('nombre-del-modulo');
+para exportar el modulo que se utilizara en el require:
+module.exports = nombreDelModulo/variable
+
+
+- variables de entorno: son variables privadas, les pertenece al proyecto, no se expone
+ en el codigo sino que se configura por fuera del codigo de la aplicacion, en el entorno.
+ Se guarda en .env sin comillas porque no es .js
+ Para utilizarlo 1ro hay que instalar el dotenv en consola: npm i dotenv
+ importarlo en el modulo: require('dotenv').config();
+ Esto se oculta por motivos de keys de servicios, db, password, etc
+
+
+- El método "stringify" se utiliza para convertir un objeto JavaScript en una cadena de texto JSON(JavaScript Object Notation)
+  que luego se puede enviar a través de una red o almacenar en un archivo. 
+El formato JSON es ampliamente utilizado para intercambiar datos entre aplicaciones, ya que es fácilmente legible tanto por humanos como por máquinas.
+
+El método "stringify" es proporcionado por el objeto JSON en Node.js. Aquí hay un ejemplo de cómo usarlo:
+javascript:
+const obj = { name: 'John', age: 30 };
+const jsonStr = JSON.stringify(obj);
+console.log(jsonStr);
+Este código creará un objeto llamado obj que contiene un nombre y una edad. Luego, se utiliza el método JSON.stringify para convertir el objeto en
+ una cadena de texto JSON y se almacena en la variable jsonStr. Por último, se imprime la cadena JSON resultante en la consola.
+
+La salida será:
+json:
+{"name":"John","age":30}
+El método JSON.stringify también puede manejar objetos anidados y matrices, y tiene varias opciones para personalizar la salida JSON.
